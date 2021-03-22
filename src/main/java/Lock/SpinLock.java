@@ -2,12 +2,13 @@ package Lock;
 
 import org.junit.Test;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author Dong.Chao
  * @Classname SpinLock
- * @Description 自旋锁模拟
+ * @Description 自旋锁模拟 写
  * @Date 2021/3/22 10:43
  * @Version V1.0
  */
@@ -27,7 +28,7 @@ public class SpinLock {
         while (!atomicReference.compareAndSet(null,thread)){
             //直到对比成功 ，即想到于获取到锁，开始执行业务操作
         }
-        System.out.println(thread.getName()+"获取到锁！");
+        System.out.println(thread.getName()+"获取到锁！ 当前时间："+System.currentTimeMillis());
     }
 
     /**
