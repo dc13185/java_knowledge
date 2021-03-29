@@ -1,6 +1,6 @@
-package Lock;
+package lock;
 
-import java.util.concurrent.BrokenBarrierException;
+import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
 /**

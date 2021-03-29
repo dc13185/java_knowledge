@@ -1,4 +1,4 @@
-package Lock;
+package lock;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -32,10 +32,6 @@ public class CyclicBarrierDemo {
                 }
             },"线程"+temp).start();
         }
-
-
-
-
     }
 
 }
