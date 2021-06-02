@@ -3,6 +3,7 @@ package condtion;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Executor;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -30,7 +31,7 @@ public class ProducerDemo {
     public static void push(Object o){
         lock.lock();
         try {
-            //为什么说判断  不能用if 进行判断呢?
+            //为什么说判断  不能用 if 进行判断呢?
             while (temp == max){
                 c1.await();
             }
