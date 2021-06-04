@@ -33,10 +33,7 @@ public class HelloControler {
         return helloService.hiService(name);
     }
 
-    @RequestMapping(value = "/hi2")
-    public String hi2(@RequestParam String name){
-        return helloService.hiService(name);
-    }
+
 
 
 }
